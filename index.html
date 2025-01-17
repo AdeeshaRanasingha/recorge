@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECORGE CLOTHING</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">RECORGE CLOTHING</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Discover Your Style</h1>
+    </section>
+
+    <section class="categories">
+        <div class="category">
+            <img src="download.webp" alt="T-Shirts">
+            <h3>T-Shirts</h3>
+        </div>
+        <div class="category">
+            <img src="download.webp" alt="Polos">
+            <h3>T-shirt Printing</h3>
+        </div>
+        <div class="category">
+            <img src="a.jpg" alt="Sportswear">
+            <h3>Sportswear</h3>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="polo.webp" alt="Free Shipping">
+            <h3>Free Shipping</h3>
+            <p>Enjoy free shipping on orders over $50.</p>
+        </div>
+        <div class="feature">
+            <img src="polo.webp" alt="Quality Guarantee">
+            <h3>Quality Guarantee</h3>
+            <p>We ensure top quality products every time.</p>
+        </div>
+        <div class="feature">
+            <img src="polo.webp" alt="Customer Support">
+            <h3>24/7 Support</h3>
+            <p>Our team is here to help, anytime you need.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h4>Newsletter</h4>
+            <p>Subscribe to get information about products and coupons</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div>
+            <h4>Contact Us</h4>
+            <p>011-7044979</p>
+            <p>Arora Connect (Pvt) Limited</p>
+            <p>387c, Galle Road, Ratmalana, Sri Lanka 10390</p>
+            <p>sales@example.com</p>
+        </div>
+        <div>
+            <h4>The Service</h4>
+            <ul>
+                <li><a href="#">Visit Shop</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Size Charts</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hero = document.querySelector('.hero');
+            const images = [
+                { src: 'a.jpg', text: 'Welcome to Our Store' },
+                { src: '41.jpg', text: 'Discover the Latest Trends' },
+                { src: 'b.jpeg', text: 'Shop Your Favorites' }
+            ];
+            let currentImageIndex = 0;
+
+            function changeHeroImage() {
+                console.log(`Changing image. Current index: ${currentImageIndex}`);
+                hero.style.backgroundImage = `url(${images[currentImageIndex].src})`;
+                hero.querySelector('h1').textContent = images[currentImageIndex].text;
+                console.log(`Image changed to: ${images[currentImageIndex].src}`);
+                console.log(`Text changed to: ${images[currentImageIndex].text}`);
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+            }
+
+            console.log("Initializing hero image rotation...");
+            setInterval(changeHeroImage, 5000); // Change image every 5 seconds
+        });
+    </script>
+</body>
+</html>

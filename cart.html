@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="cart.css" rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">T-Shirt Shop</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tshirt.html">T-Shirt</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Your Cart</h2>
+
+        <div class="cart-item" id="cartItemTemplate" style="display: none;">
+            <img src="" alt="Product Image" class="cart-item-image">
+            <div class="cart-item-details">
+                <h3 class="cart-item-title">Product Title</h3>
+                <p class="cart-item-code">Item Code: </p>
+                <p class="cart-item-quantity">Quantity: </p>
+                <p class="cart-item-price">Price: $</p>
+            </div>
+            <div class="cart-item-actions">
+                <button onclick="removeItem(this)">Remove</button>
+            </div>
+        </div>
+
+        <div id="cartItemsContainer"></div>
+
+        <div class="cart-summary">
+            <p>Total Items: <span id="totalItems">0</span></p>
+            <p>Total Price: $<span id="totalPrice">0</span></p>
+            <button class="btn-checkout" onclick="openCheckoutModal()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <h3>Enter Your Details</h3>
+            <input type="text" id="customerName" placeholder="Your Name" required>
+            <input type="text" id="customerAddress" placeholder="Your Address" required>
+            <input type="tel" id="customerPhone" placeholder="Your Phone Number" required>
+            <input type="text" id="couponCode" placeholder="Coupon Code (Optional)">
+            <div class="modal-actions">
+                <button onclick="proceedToCheckout()">Submit</button>
+                <button onclick="closeCheckoutModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h4>Newsletter</h4>
+            <p>Subscribe to get information about products and coupons</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div>
+            <h4>Contact Us</h4>
+            <p>011-7044979</p>
+            <p>Arora Connect (Pvt) Limited</p>
+            <p>387c, Galle Road, Ratmalana, Sri Lanka 10390</p>
+            <p>sales@example.com</p>
+        </div>
+        <div>
+            <h4>The Service</h4>
+            <ul>
+                <li><a href="#">Visit Shop</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Size Charts</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="cart.js">
+        
+    </script>
+</body>
+</html>

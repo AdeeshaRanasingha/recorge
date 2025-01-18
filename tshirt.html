@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Inventory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="tshirt.css" rel="stylesheet">
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">T-Shirt Shop</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tshirt.html">T-Shirt</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="product" onclick="showModal('Classic White T-Shirt', 'c.webp', 'T001', 20, '15 available', 'This is a high-quality classic white t-shirt made with 100% cotton.')">
+            <img src="c.webp" alt="Classic White T-Shirt">
+            <div class="product-details">
+                <h3>Classic White T-Shirt</h3>
+                <p>Item Code: T001</p>
+                <p>Price: $20</p>
+                <p>Stock: 15 available</p>
+            </div>
+        </div>
+
+        <div class="product" onclick="showModal('Black Premium T-Shirt', 'a.jpg', 'T002', 25, '10 available', 'A premium black t-shirt with a soft and durable fabric blend.')">
+            <img src="a.jpg" alt="Black Premium T-Shirt">
+            <div class="product-details">
+                <h3>Black Premium T-Shirt</h3>
+                <p>Item Code: T002</p>
+                <p>Price: $25</p>
+                <p>Stock: 10 available</p>
+            </div>
+        </div>
+
+        <div class="product" onclick="showModal('Blue V-Neck T-Shirt', 'd.jpg', 'T003', 22, '8 available', 'This blue V-neck t-shirt is perfect for casual wear and is made with breathable fabric.')">
+            <img src="d.jpg" alt="Blue V-Neck T-Shirt">
+            <div class="product-details">
+                <h3>Blue V-Neck T-Shirt</h3>
+                <p>Item Code: T003</p>
+                <p>Price: $22</p>
+                <p>Stock: 8 available</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Product Image">
+            <h3 id="modalTitle">Product Title</h3>
+            <p id="modalCode">Item Code: </p>
+            <p id="modalPrice">Price: $<span id="priceValue">0</span></p>
+            <p id="modalStock">Stock: </p>
+            <p id="modalDescription">Description: </p>
+            <div class="quantity-container">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1" oninput="updatePrice()">
+            </div>
+            <div class="modal-actions">
+                <button onclick="addToCart()">Add to Cart</button>
+                <button class="close-modal" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h4>Newsletter</h4>
+            <p>Subscribe to get information about products and coupons</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div>
+            <h4>Contact Us</h4>
+            <p>011-7044979</p>
+            <p>Arora Connect (Pvt) Limited</p>
+            <p>387c, Galle Road, Ratmalana, Sri Lanka 10390</p>
+            <p>sales@example.com</p>
+        </div>
+        <div>
+            <h4>The Service</h4>
+            <ul>
+                <li><a href="#">Visit Shop</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Size Charts</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="tshirt.js">
+        
+    </script>
+</body>
+</html>

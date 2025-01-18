@@ -5,15 +5,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECORGE CLOTHING</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        header nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        header nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('young-handsome-man-choosing-clothes-shop.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            text-align: center;
+            padding: 1rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #f8b400;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #d89a00;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem;
+            padding: 0 1rem;
+        }
+        .category {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .category img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .category h3 {
+            margin: 1rem 0;
+        }
+        .promotions, .testimonials, .newsletter {
+            margin: 2rem;
+            padding: 2rem;
+            background-color: #f4f4f4;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .promotions h2, .testimonials h2, .newsletter h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .promotion-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .promotion-item h3 {
+            margin-top: 1rem;
+        }
+        .testimonial {
+            margin: 1rem 0;
+            font-style: italic;
+        }
+        .testimonial h4 {
+            margin-top: 0.5rem;
+            color: #555;
+        }
+        .newsletter input {
+            padding: 0.5rem;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .newsletter button {
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            background-color: #f8b400;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .newsletter button:hover {
+            background-color: #d89a00;
+        }
+        footer {
+    background-color: #333;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    color: #fff;
+}
+footer div {
+    color: #fff;
+}
+footer h4 {
+    margin-bottom: 1rem;
+    color: #f8b400;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+footer .newsletter input {
+    padding: 0.5rem;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+footer .newsletter button {
+    padding: 0.5rem;
+    background-color: #f8b400;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+footer .social-icons img {
+    width: 32px;
+    margin: 0.5rem;
+}
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            header {
+                flex-direction: column;
+            }
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
 
+        @media (max-width: 768px) {
+
+footer {
+grid-template-columns: 1fr;
+text-align: center;
+}
+}
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">RECORGE CLOTHING</div>
+        <div class="logo">RECORGE CLOTHING</div><br>
         <nav>
             <a href="index.html">Home</a>
-            <a href="tshirt.html">T-Shirt</a>
+            <a href="tshirt.html">T-Shirts</a>
             <a href="cart.html">Cart</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -21,16 +214,19 @@
 
     <section class="hero">
         <h1>Discover Your Style</h1>
+        <button>Shop Now</button>
     </section>
 
     <section class="categories">
         <div class="category">
-            <img src="download.webp" alt="T-Shirts">
-            <h3>T-Shirts</h3>
+            <a href="tshirt.html" style="text-decoration: none; color: inherit;">
+                <img src="polo.webp" alt="T-Shirts">
+                <h3>T-Shirts</h3>
+            </a>
         </div>
         <div class="category">
-            <img src="download.webp" alt="Polos">
-            <h3>T-shirt Printing</h3>
+            <img src="c.webp" alt="Printing">
+            <h3>Custom Printing</h3>
         </div>
         <div class="category">
             <img src="a.jpg" alt="Sportswear">
@@ -38,39 +234,44 @@
         </div>
     </section>
 
-    <section class="features">
-        <div class="feature">
-            <img src="polo.webp" alt="Free Shipping">
-            <h3>Free Shipping</h3>
-            <p>Enjoy free shipping on orders over $50.</p>
+    <section class="promotions">
+        <h2>Exclusive Offers</h2>
+        <div class="promotion-item">
+            <img src="simple-discount-voucher_1017-7578.avif" alt="Sale">
+            <h3>60% Off on Selected Items</h3>
+            <p>Don't miss out on our limited-time offers. Shop now and save big!</p>
         </div>
-        <div class="feature">
-            <img src="polo.webp" alt="Quality Guarantee">
-            <h3>Quality Guarantee</h3>
-            <p>We ensure top quality products every time.</p>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"The quality of their t-shirts is unmatched! Highly recommended."</p>
+            <h4>- John Doe</h4>
         </div>
-        <div class="feature">
-            <img src="polo.webp" alt="Customer Support">
-            <h3>24/7 Support</h3>
-            <p>Our team is here to help, anytime you need.</p>
+        <div class="testimonial">
+            <p>"Amazing designs and fast delivery. I'm a regular customer now!"</p>
+            <h4>- Jane Smith</h4>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest trends and exclusive discounts.</p>
+        <div>
+            <input type="email" placeholder="Enter your email" required>
+            <button>Subscribe</button>
         </div>
     </section>
 
     <footer>
-        <div>
-            <h4>Newsletter</h4>
-            <p>Subscribe to get information about products and coupons</p>
-            <div class="newsletter">
-                <input type="email" placeholder="Email address">
-                <button>Subscribe</button>
-            </div>
-        </div>
+        
         <div>
             <h4>Contact Us</h4>
-            <p>011-7044979</p>
-            <p>Arora Connect (Pvt) Limited</p>
-            <p>387c, Galle Road, Ratmalana, Sri Lanka 10390</p>
-            <p>sales@example.com</p>
+            <p>0762901765</p>
+            <p>Recorge Clothing (Pvt) Limited</p>
+            <p>117, Pamunuwa Road, Maharagama, Sri Lanka 10390</p>
+            <p>RecorgeClothing@gmail.com</p>
         </div>
         <div>
             <h4>The Service</h4>
@@ -90,29 +291,12 @@
                 <li><a href="#">Terms of Service</a></li>
             </ul>
         </div>
+        all rights reserved - Adeesha Harshana
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const hero = document.querySelector('.hero');
-            const images = [
-                { src: 'a.jpg', text: 'Welcome to Our Store' },
-                { src: '41.jpg', text: 'Discover the Latest Trends' },
-                { src: 'b.jpeg', text: 'Shop Your Favorites' }
-            ];
-            let currentImageIndex = 0;
-
-            function changeHeroImage() {
-                console.log(`Changing image. Current index: ${currentImageIndex}`);
-                hero.style.backgroundImage = `url(${images[currentImageIndex].src})`;
-                hero.querySelector('h1').textContent = images[currentImageIndex].text;
-                console.log(`Image changed to: ${images[currentImageIndex].src}`);
-                console.log(`Text changed to: ${images[currentImageIndex].text}`);
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-            }
-
-            console.log("Initializing hero image rotation...");
-            setInterval(changeHeroImage, 5000); // Change image every 5 seconds
+        document.querySelector('.hero button').addEventListener('click', () => {
+            window.location.href = "tshirt.html";
         });
     </script>
 </body>

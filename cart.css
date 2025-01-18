@@ -196,6 +196,16 @@ footer .social-icons img {
 width: 32px;
 margin: 0.5rem;
 }
+.notice {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fffae6;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+}
 
 @media (max-width: 768px) {
 
